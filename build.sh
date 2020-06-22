@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t gilmariokpslow/pipeline
+docker build -t gilmariokpslow/pipeline:latest .

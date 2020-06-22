@@ -1,3 +1,5 @@
+package org.gilmariosoftware;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,9 +17,9 @@ public class Start {
 
     public static void main(String[] args) {
         port(8080);
-        get("/pipeline/:project", (req, res) -> {
+        get("/pipelines/:project", (req, res) -> {
             String project = req.params(":project");
-            Files.createFile(Paths.get("/", "home", "gilmario", project));
+            Files.createFile(Paths.get("/", "opt", "pipelines", project));
             return "OK";
         });
     }
